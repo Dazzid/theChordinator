@@ -16,20 +16,72 @@ all_notes = {
 #define voicing for natures
 maj = {'v_0':[0, 12, 16, 19], 'v_1':[0, 7, 12, 16], 'v_2':[0, 4, 7, 12], 'v_3':[0, 7, 16, 19]}
 maj7 = {'v_0':[0, 12, 16, 19, 23], 'v_1':[0, 11, 16, 19], 'v_2':[0, 11, 14, 16], 'v_3':[0, 11, 14, 16, 19]}
-m = {'v_0':[0, 12, 15, 19], 'v_1':[0, 15, 19, 24], 'v_2':[0, 19, 24, 27], 'v_3':[12, 19, 24, 27]}
-m7 = {'v_0':[0, 12, 15, 19, 23], 'v_1':[0, 10, 15, 19], 'v_2':[0, 10, 14, 15], 'v_3':[0, 10, 14, 15, 19]}
+m = {'v_0':[0, 12, 15, 19], 'v_1':[0, 15, 19, 24], 'v_2':[0, 19, 24, 27], 'v_3':[0, 12, 19, 24, 27]}
+
+
+
+m7 = {'v_0':[0, 12, 15, 19, 22], 'v_1':[0, 10, 15, 19], 'v_2':[0, 10, 14, 15], 'v_3':[0, 10, 14, 15, 19]}
+
+
+
 dom_7 = {'v_0':[0, 12, 16, 19, 22], 'v_1':[0, 10, 16, 19], 'v_2':[0, 10, 14, 16], 'v_3':[0, 10, 14, 16, 19]}
 ø7 =  {'v_0':[0, 12, 15, 18, 22], 'v_1':[0, 10, 15, 18], 'v_2':[0, 15, 18, 22, 24], 'v_3':[0, 6, 10, 15, 18]}
-o7 = {'v_0':[0, 12, 15, 18, 21], 'v_1':[0, 15, 18, 21, 24], 'v_2':[0, 18, 21, 24, 27], 'v_3':[12, 15, 18, 21]}
-sus = {'v_0':[0, 12, 17, 19], 'v_1':[0, 17, 19, 24], 'v_2':[0, 19, 24, 29], 'v_3':[12, 19, 24, 29]} 
+o7 = {'v_0':[0, 12, 15, 18, 21], 'v_1':[0, 15, 18, 21, 24], 'v_2':[0, 18, 21, 24, 27], 'v_3':[0, 12, 15, 18, 21]}
+sus = {'v_0':[0, 12, 17, 19], 'v_1':[0, 17, 19, 24], 'v_2':[0, 19, 24, 29], 'v_3':[0, 12, 19, 24, 29]} 
 sus7 = {'v_0':[0, 12, 17, 19, 22], 'v_1':[0, 10, 17, 19], 'v_2':[0, 10, 14, 17], 'v_3':[0, 10, 14, 17, 19]}
-sus2 = {'v_0':[0, 12, 14, 19], 'v_1':[0, 14, 19, 24], 'v_2':[0, 19, 24, 26], 'v_3':[12, 19, 24, 26]}
+sus2 = {'v_0':[0, 12, 14, 19], 'v_1':[0, 14, 19, 24], 'v_2':[0, 19, 24, 26], 'v_3':[0, 12, 19, 24, 26]}
 # Define the voicing dictionaries
 chord_voicings = {'maj': maj, 'maj7': maj7, 'm': m, 'm7': m7, 'dom_7': dom_7, 'ø7': ø7, 'o7': o7, 'sus': sus, 'sus7': sus7, 'sus2': sus2}
 
+voicing = ['v_0', 'v_1', 'v_2', 'v_3']
 
-seq = ['<start>', '<style>', 'Jazz', '|:', '.', 'E-', '|', '.', 'E-', '|', '.', 'E', '|', '.', 'E', '|', '.', 'F', 'm7', '|', '.', 'B-', '7', '|', '.', 'E-', '|', 'Repeat_1', '.', 'E-', '|', 'Repeat_2', '.', 'A', 'm7', '.', 'D', '7', '|', '.', 'G', '|', '.', 'A', 'm7', '.', 'D', '7', '|', '.', 'G', '|', '.', 'A', 'm7', '.', 'D', '7', '|', '.', 'G', 'm7', '|', '.', 'C', '7', '|', '.', 'F', '7', '|', '.', 'B-', '7', '|', '.', 'E-', '|', '.', 'E-', '|', '.', 'G-', '|', '.', 'G-', '|', '.', 'F', 'm7', '|', '.', 'B-', '7', '|', 'Repeat_0', '.', 'E-', '|', '.', 'E-', ':|', '|', 'Repeat_0', '.', 'G', 'm7', '|', '.', 'C', '7', '|', '.', 'F', 'm7', '|', '.', 'B-', '7', '|', '.', 'E-', '|', '.', 'E-', '<end>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+samba = ['<start>', '<style>', 'Samba', '|:', '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 
+       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 
+       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 'Repeat_1', 
+       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 'Repeat_2', '.', 'A#', 'add 9', 'add 6', 
+       '.', 'F#', '7', '.', 'A-', '7', '|', '.', 'E-', 'm7', '.', 'G#', '|', '.', 'A-', 'm7', 'alter b5', '.', 'E-', '7', '|', 
+       '.', 'B-', '9', '.', 'C#', '7', '|', '.', 'A#', '6', 'add 9', 'alter b5', '.', 'A-', '7', 'add 9', 'alter #5', '|', 
+       '.', 'E-', 'm7', '.', 'G#', '|', '.', 'A-', 'm7', 'alter b5', '|', '.', 'A-', 'm7', 'alter b5', '|', '.', 'E-', '7', '|', 
+       '.', 'B-', '9', '.', 'C#', '7', '|', '.', 'G#', '6', '/', 'B', '.', 'F#', 'm6', '|', '.', 'G#', '6', '/', 'B', '.', 'F#', 'm6', '|', 
+       '.', 'C#', 'm6', '.', 'A#', '9', '|', '.', 'F#', 'maj7', '.', 'A-', '7', 'alter #5', '|', '.', 'E-', '7sus', 'add b9', 
+       '.', 'E-', '7', '|', '.', 'B-', '9', '.', 'C#', '7', '|', '.', 'A#', 'add 9', 'add 6', '.', 'C#', '13', '|:', 
+       '.', 'A#', 'add 9', 'add 6', '.', 'B', '|', 'Form_B', '.', 'A#', 'add 9', 'add 6', '|', '.', 'A#', 'add 9', 'add 6', 
+       '.', 'C', '|', '.', 'B-', 'm7', '|', '.', 'C#', '7', '|', '.', 'B-', 'm7', '|', '.', 'C#', '7', '|', 
+       '.', 'D-', 'm7', 'alter b5', '.', 'A-', '7', '|', '.', 'E-', '7', '|', '.', 'E-', '7', '|', '.', 'E-', '7', '.', 'D#', '|', 
+       '.', 'C##', 'm7', '/', 'G#', '|', '.', 'E#', 'm6', '/', 'G#', '|', '.', 'E-', '7', '|', '.', 'B-', '9', 
+       '.', 'C#', '7', '|', 'Repeat_1', '.', 'A#', '6', 'add 9', 'alter b5', '.', 'A-', '7', 'add 9', 'alter #5', '|', 'Repeat_3', 
+       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '<end>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
+       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
 
+stella = ['<start>', '<style>', 'Jazz', '|', 'Form_A', '.', 'E', 'm7', 
+'alter b5', '|', '.', 'A', '7', 'add b9', '|', '.', 
+'C', 'm7', '|', '.', 'F', '7', '|', '.', 
+'F', 'm7', '|', '.', 'B-', '7', '|', '.', 
+'E-', 'maj7', '|', '.', 'A-', '7', '|', '.', 
+'B-', 'maj7', '|', '.', 'E', 'm7', 'alter b5', 'add b9', 
+'.', 'A', '7', 'alter b5', 'add b9', '|', '.', 'D', 
+'m7', '|', '.', 'B-', 'm7', '.', 'E-', '7', 
+'|', '.', 'F', 'maj7', '|', '.', 'E', 'm7', 
+'alter b5', '|', '.', 'E-', 'maj7', 'add #11', '|', '.', 
+'D', '7', 'add b9', '|', 'Form_B', '.', 'G', '7', 
+'add b13', '|', '.', 'G', '7', 'add b13', '|', '.', 
+'C', 'm7', '|', '.', 'C', 'm7', '|', '.', 
+'A-', '7', 'add #11', '|', '.', 'A-', '7', 'add #11', 
+'|', '.', 'B-', 'maj7', '|', '.', 'B-', 'maj7', 
+'|', 'Form_C', '.', 'E', 'm7', 'alter b5', '|', '.', 
+'A', '7', 'add b9', '|', '.', 'D', 'm7', 'alter b5', 
+'|', '.', 'G', '7', 'add b9', '|', '.', 'C', 
+'m7', 'alter b5', '|', '.', 'F', '7', 'add b9', '|', 
+'.', 'B-', 'maj7', '|', '.', 'B-', 'maj7', '<end>', 
+'<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>',]
+
+seq = stella
 # Replace all char'-' by 'b'4
 seq = [x.replace('-', 'b') for x in seq]
 
@@ -39,20 +91,26 @@ seq = [x for x in seq if x != '<pad>']
 for i in range(len(seq) - 1):
     if seq[i] == '7' and seq[i + 1] != 'add 7':
         seq[i] = 'dom_7'
-        
-print(seq)
+    
+print(len(seq))
 
-#%%
+#add major chord token to the sequence
 new_sequence = []
 for i in range(len(seq)):
     new_sequence.append(seq[i])
     if seq[i] in all_notes and (i == len(seq) - 1 or seq[i + 1] in structural_elements or seq[i + 1].startswith('Form_')):
         new_sequence.append('maj')
 
-print(new_sequence)
+c = 0    
+for element in new_sequence:
+    if c%10 == 0:
+        print('\n')
+    print("'"+element+"'", end=', ')
+    c += 1
 #%%
-#run over the sequence, detect if there is a dot and define the base root with the information provided by all_notes, then create the sequence of MIDI notes based on the nature
-voicing = ['v_0', 'v_1', 'v_2', 'v_3']
+#run over the sequence, detect if there is a dot and define the base root with the information provided by all_notes, 
+# then create the sequence of MIDI notes based on the nature
+
 
 midi_sequence = []
 root = 0
@@ -99,6 +157,7 @@ for m, d in zip(midi_sequence, durations):
 
 #add the additions and alteration into the midi array
 
+#----------------------------------------------------------
 # %%
 from midiutil import MIDIFile
 
