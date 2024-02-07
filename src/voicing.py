@@ -24,46 +24,46 @@ all_notes = {
     }
 
 #define voicing for natures
-maj = {'v_0':[0, 12, 16, 19], 'v_1':[0, 7, 12, 16], 'v_2':[0, 4, 7, 12], 'v_3':[0, 7, 16, 19]}
-maj7 = {'v_0':[0, 12, 16, 19, 23], 'v_1':[0, 11, 16, 19], 'v_2':[0, 11, 14, 16], 'v_3':[0, 11, 14, 16, 19]}
+maj = {'v_0':[0, 7, 12, 16], 'v_1':[0, 7, 16, 19], 'v_2':[0, 4, 7, 12], 'v_3':[0, 7, 16, 19]}
+maj7 = {'v_0':[0, 11, 14, 16, 19], 'v_1':[0, 11, 16, 19], 'v_2':[0, 11, 14, 16], 'v_3':[0, 11, 14, 16, 19]}
 m = {'v_0':[0, 12, 15, 19], 'v_1':[0, 15, 19, 24], 'v_2':[0, 19, 24, 27], 'v_3':[0, 12, 19, 24, 27]}
-m7 = {'v_0':[0, 10, 15, 19], 'v_1':[0, 7, 10, 15, 19], 'v_2':[0, 10, 14, 15], 'v_3':[0, 10, 14, 15]}
 
-dom_7 = {'v_0':[0, 12, 16, 19, 22], 'v_1':[0, 10, 12, 16, 19], 'v_2':[0, 10, 14, 16], 'v_3':[0, 10, 14, 16, 19]}
+m7 = {'v_0':[0, 10, 15, 19], 'v_1':[0, 7, 10, 15], 'v_2':[0, 10, 14, 15], 'v_3':[0, 10, 14, 15]}
 
-ø7 =  {'v_0':[0, 12, 15, 18, 22], 'v_1':[0, 10, 15, 18], 'v_2':[0, 15, 18, 22, 24], 'v_3':[0, 6, 10, 15, 18]}
-o7 = {'v_0':[0, 12, 15, 18, 21], 'v_1':[0, 15, 18, 21, 24], 'v_2':[0, 18, 21, 24, 27], 'v_3':[0, 12, 15, 18, 21]}
+dom_7 = {'v_0':[0, 7, 10, 16, 19], 'v_1':[0, 10, 16, 19], 'v_2':[0, 10, 14, 16], 'v_3':[0, 10, 14, 16, 19]}
+
+ø7 =  {'v_0':[0, 15, 18, 22], 'v_1':[0, 10, 15, 18], 'v_2':[0, 15, 18, 22, 24], 'v_3':[0, 6, 10, 15, 18]}
+o7 = {'v_0':[0, 15, 18, 21], 'v_1':[0, 15, 18, 21, 24], 'v_2':[0, 18, 21, 24, 27], 'v_3':[0, 12, 15, 18, 21]}
 sus = {'v_0':[0, 12, 17, 19], 'v_1':[0, 17, 19, 24], 'v_2':[0, 19, 24, 29], 'v_3':[0, 12, 19, 24, 29]} 
-sus7 = {'v_0':[0, 12, 17, 19, 22], 'v_1':[0, 10, 17, 19], 'v_2':[0, 10, 14, 17], 'v_3':[0, 10, 14, 17, 19]}
-sus2 = {'v_0':[0, 12, 14, 19], 'v_1':[0, 14, 19, 24], 'v_2':[0, 19, 24, 26], 'v_3':[0, 12, 19, 24, 26]}
+sus7 = {'v_0':[0, 10, 17, 19], 'v_1':[0, 10, 14, 17, 19], 'v_2':[0, 10, 14, 17], 'v_3':[0, 10, 14, 17, 19]}
+sus2 = {'v_0':[0, 14, 19, 24], 'v_1':[0, 12, 19, 24, 26], 'v_2':[0, 19, 24, 26], 'v_3':[0, 12, 19, 24, 26]}
 # Define the voicing dictionaries
 chord_voicing = {'maj': maj, 'maj7': maj7, 'm': m, 'm7': m7, 'dom_7': dom_7, 'ø7': ø7, 'o7': o7, 'sus': sus, 'sus7': sus7, 'sus2': sus2}
 
 
 
-samba = ['<start>', '<style>', 'Samba', '|:', '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 
-       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 
-       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 'Repeat_1', 
-       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '|', 'Repeat_2', '.', 'A#', 'add 9', 'add 6', 
-       '.', 'F#', '7', '.', 'A-', '7', '|', '.', 'E-', 'm7', '.', 'G#', '|', '.', 'A-', 'm7', 'alter b5', '.', 'E-', '7', '|', 
-       '.', 'B-', '9', '.', 'C#', '7', '|', '.', 'A#', '6', 'add 9', 'alter b5', '.', 'A-', '7', 'add 9', 'alter #5', '|', 
-       '.', 'E-', 'm7', '.', 'G#', '|', '.', 'A-', 'm7', 'alter b5', '|', '.', 'A-', 'm7', 'alter b5', '|', '.', 'E-', '7', '|', 
-       '.', 'B-', '9', '.', 'C#', '7', '|', '.', 'G#', '6', '/', 'B', '.', 'F#', 'm6', '|', '.', 'G#', '6', '/', 'B', '.', 'F#', 'm6', '|', 
-       '.', 'C#', 'm6', '.', 'A#', '9', '|', '.', 'F#', 'maj7', '.', 'A-', '7', 'alter #5', '|', '.', 'E-', '7sus', 'add b9', 
-       '.', 'E-', '7', '|', '.', 'B-', '9', '.', 'C#', '7', '|', '.', 'A#', 'add 9', 'add 6', '.', 'C#', '13', '|:', 
-       '.', 'A#', 'add 9', 'add 6', '.', 'B', '|', 'Form_B', '.', 'A#', 'add 9', 'add 6', '|', '.', 'A#', 'add 9', 'add 6', 
-       '.', 'C', '|', '.', 'B-', 'm7', '|', '.', 'C#', '7', '|', '.', 'B-', 'm7', '|', '.', 'C#', '7', '|', 
-       '.', 'D-', 'm7', 'alter b5', '.', 'A-', '7', '|', '.', 'E-', '7', '|', '.', 'E-', '7', '|', '.', 'E-', '7', '.', 'D#', '|', 
-       '.', 'C##', 'm7', '/', 'G#', '|', '.', 'E#', 'm6', '/', 'G#', '|', '.', 'E-', '7', '|', '.', 'B-', '9', 
-       '.', 'C#', '7', '|', 'Repeat_1', '.', 'A#', '6', 'add 9', 'alter b5', '.', 'A-', '7', 'add 9', 'alter #5', '|', 'Repeat_3', 
-       '.', 'A#', '6', 'add 9', 'alter b5', '.', 'C#', '7', 'add 9', 'alter #5', '<end>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', 
-       '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+alvara = ['<start>', '<style>', 'Samba', '|:', '.', 'C', 'add 9', 'add 6', 
+'|', '.', 'C', 'add 9', 'add 6', '|', '.', 'D', 
+'7', '|', '.', 'D', '7', '|', '.', 'F', 
+'m6', '|', '.', 'F', 'm6', ':|', '|', '.', 
+'F', 'm6', '|', '.', 'C', 'add 9', 'add 6', '|', 
+'.', 'C', 'add 9', 'add 6', '|', '.', 'E', '7', 
+'|', '.', 'E', '7', '|', '.', 'C', '7', 
+'|', '.', 'C', '7', '|', '.', 'F', 'maj7', 
+'|', '.', 'F', 'maj7', '|', '.', 'F', 'm6', 
+'|', '.', 'B-', '7', '|', '.', 'C', '|', 
+'.', 'A', '7', '|', '.', 'D', '7', '|', 
+'.', 'D', 'm', '.', 'G', '7', '|', '.', 
+'C', 'm', '|', '.', 'C', 'm', '|', '.', 
+'G', '7', '|', '.', 'G', '7', '|', '.', 
+'C', '7', '|', '.', 'C', '7', '|', '.', 
+'F', '7', '|', '.', 'B-', '7', '|', '.', 
+'E-', '|', '.', 'F', 'm', '.', 'G', '7', 
+'|', '.', 'C', 'm', '.', 'E-', '|', '.', 
+'D', 'm7', 'alter b5', '.', 'G', '7', '|', '.', 
+'C', 'm', '.', 'E-', '|', '.', 'D', 'm7', 
+'alter b5', '.', 'G', '7', '<end>', '<pad>', '<pad>', '<pad>', 
+'<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
 
 stella = ['<start>', '<style>', 'Jazz', '|', 'Form_A', '.', 'E', 'm7', 
 'alter b5', '|', '.', 'A', '7', 'add b9', '|', '.', 
@@ -87,16 +87,33 @@ stella = ['<start>', '<style>', 'Jazz', '|', 'Form_A', '.', 'E', 'm7',
 '.', 'B-', 'maj7', '|', '.', 'B-', 'maj7', '<end>', 
 '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>',]
 
-seq = stella
+seq = alvara
+
 # Replace all char'-' by 'b'4
 seq = [x.replace('-', 'b') for x in seq]
 
 # Delete all '<pad>' in the sequence
 seq = [x for x in seq if x != '<pad>']
 
+#Fix '7' to 'dom_7' and '7sus' to 'sus7'
 for i in range(len(seq) - 1):
     if seq[i] == '7' and seq[i + 1] != 'add 7':
         seq[i] = 'dom_7'
+    if seq[i] == '7sus':
+        seq[i] = 'sus7'
+ 
+#Fix m6, m9, m11
+for i, e in enumerate(seq):
+    if e == 'm6':
+        seq[i] = 'm'
+        seq.insert(i + 1, 'add 6')
+    if e == 'm9':
+        seq[i] = 'm'
+        seq.insert(i + 1, 'add 9')
+    if e == 'm11':
+        seq[i] = 'm'
+        seq.insert(i + 1, 'add 11')
+         
     
 print(len(seq))
 
@@ -107,12 +124,60 @@ for i in range(len(seq)):
     if seq[i] in all_notes and (i == len(seq) - 1 or seq[i + 1] in structural_elements or seq[i + 1].startswith('Form_')):
         new_sequence.append('maj')
 
+seq = new_sequence
+#print the sequence
 c = 0    
-for element in new_sequence:
+for element in seq:
     if c%10 == 0:
-        print('\n')
+        print('')
     print("'"+element+"'", end=', ')
     c += 1
+print('\n')
+
+
+
+def convert_song_structure(arr):
+    song_info_start = arr.index('<start>') + 1 # skip '<start>'
+    song_info_end = arr.index('<end>') # to not include '<end>'
+    
+    between_repeats = False
+    repeat_section = []
+    completed_song = []
+    
+    for elem in arr[song_info_start:song_info_end]:
+        if elem == '|:':
+            # start of a repeat section
+            between_repeats = True
+            repeat_section = ['|']
+        elif elem == ':|':
+            # end of a repeat section
+            between_repeats = False
+            repeat_section.append('|')
+            # repeat the section and append to completed song
+            completed_song += repeat_section + repeat_section
+            repeat_section = []
+        elif between_repeats:
+            # within a repeat section
+            repeat_section.append(elem)
+        else:
+            # outside of a repeat section
+            completed_song.append(elem)
+        
+    return completed_song
+
+seq = convert_song_structure(seq)
+
+print("---------------------")
+print(len(seq))
+
+#print the sequence
+c = 0    
+for element in seq:
+    if c%10 == 0:
+        print('')
+    print("'"+element+"'", end=', ')
+    c += 1
+print('\n')
     
 #----------------------------------------------------------
 #%%
@@ -124,6 +189,9 @@ root = 0
 midi = []
 durations = []
 num_chords = 0
+v = 0
+pitch = ''
+mod = 4
 
 # Create a dictionary for the alter section
 add_dict = {
@@ -151,8 +219,8 @@ alter_dict = {
     'alter #11': 11
 }
 
-v = 0
-for element in new_sequence:
+
+for element in seq:
     if element in ['|', '|:', ':|']:
         num_chords = 0
     elif element == '.':
@@ -160,13 +228,23 @@ for element in new_sequence:
         durations.append(num_chords)
     elif element in all_notes:
         root = all_notes[element]
+        pitch = element
     elif element in natures:
-        n = v%2
+        #random voicing int from 0 to 3
+        #n = random.randint(0, 3)
+        n = v % mod
         midi = [x + root for x in chord_voicing[element][voicing[n]]]
+        print(pitch, element, n)
         midi_sequence.append(midi)
     elif element in add_dict:
         if element in add_dict:
             midi.append(root + add_dict[element])
+        for i, n in enumerate(midi):
+            diff = (n - root) % 12 
+            if (n - root) % 12 == 2 and element.find('9') != -1:
+                #delete the note from the midi array
+                midi.remove(n)
+                
     elif element in alter_dict:
         for i, n in enumerate(midi):
                 diff = (n - root) % 12 
@@ -175,8 +253,6 @@ for element in new_sequence:
                 elif element.find('#') != -1 and diff == alter_dict[element]:
                     midi[i] = n + 1
     v += 1
-
-
         
 #if duration has a 2 then this value and previous one of duration array has the value 0.5 each. If there is a 3 then 0.33 each, if there is a 4 then 0.25 each
 for i in range(len(durations)):
@@ -198,15 +274,12 @@ for i in range(len(durations)):
 #    print(m, d)
 
 #----------------------------------------------------------
-
-
-# %%
 from midiutil import MIDIFile
 
 track    = 0
 channel  = 0
 time     = 0    # In beats
-tempo    = 120   # In BPM
+tempo    = 200   # In BPM
 volume   = 80  # 0-127, as per the MIDI standard
 
 MyMIDI = MIDIFile(1)  # One track, defaults to format 1 (tempo track is created automatically)
@@ -216,10 +289,20 @@ time = 0
 for m, d in zip(midi_sequence, durations):
     l = d * 4
     for i, pitch in enumerate(m):
+        volume = int(random.uniform(55, 85))
         MyMIDI.addNote(track, channel, pitch, time, l, volume)
     time += d*4
-    print(time)
-    
-with open("mySong.mid", "wb") as output_file:
+
+fileName = "myFile"
+with open(fileName + '.mid', "wb") as output_file:
     MyMIDI.writeFile(output_file)
+
+print(fileName + '.mid', "\nMIDI file created!", )
+
+#play the midi file
+
+
+
+
+
    # %%
