@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import xml.etree.ElementTree as ET
 from tqdm.auto import tqdm
-import music21 as m21
+
 import librosa as lib
 import utils_lenghts as lengths
 import random
@@ -248,7 +248,14 @@ def get_metadata(path):
     metadata = {'composer': 'Null', 'style': 'Null', 'song_name': 'Null', 'tonality': 'Null', 'midi_key': 0, 'time_signature': '4/4', 'decade': 'Null'}
     tree = ET.parse(path)
     root = tree.getroot()
-    title = root.find('movement-title').text
+    #parse the name of the song
+  
+    title = 'None'
+    if root.find('work').find('work-title').text != None:
+        title = root.find('work').find('work-title').text        
+    else:
+        title = root.find('movement-title').text
+
     part = root.find('part')
     #define the metadata elements
 

@@ -1,10 +1,14 @@
 #%%
+import numpy as np
+from importlib import reload
 
 from utils import get_metadata, getArrayOfElementsInChord
+
 import xml.etree.ElementTree as ET
 
 #song_path = "../data/iRealXML/Message To A Friend.xml"
-song_path = "../data/Penny Lane.musicxml"
+file = "Aquarela Do Brasil (a.k.a. Brazil).musicxml"
+song_path = "../data/" + file
 
 tree = ET.parse(song_path)
 root = tree.getroot()
@@ -25,7 +29,7 @@ the_offset_sequence = []
 
 #Division is the number of ticks per quarter note
 division = int(root.find('part').find('measure').find('attributes').find('divisions').text)
-print(division)
+#print(division)
 
 meta_info = get_metadata(song_path)
 
@@ -39,7 +43,6 @@ the_chord_sequence.append(meta_info['style'])
 the_offset_sequence.append(offset)
 
 for measure in root.iter('measure'):
-    
     #get the offset reference
     measure_number = int(measure.attrib.get('number'))
     #print(measure_number, '->', offset)
@@ -83,7 +86,7 @@ for measure in root.iter('measure'):
             the_chord_sequence.append(song_form)
             the_offset_sequence.append(offset)
             
-    #get barline
+    #get the repetition info
     barline = measure.find('barline')
     if barline != None:
         ending = barline.find('ending')
@@ -94,9 +97,7 @@ for measure in root.iter('measure'):
                 #print(bar)
                 the_chord_sequence.append(bar)
                 the_offset_sequence.append(offset)
-                
-    
-        
+                    
     #get the chords
     for harmony in measure.iter('harmony'):
         root = harmony.find('root')
@@ -160,8 +161,12 @@ for measure in root.iter('measure'):
         offset += duration
         #print(offset)
         
-    #this second bar is relevat to close the section
-    if barline != None:
+    #this second bar is relevant to close the section
+    #Find all barline elements within the measure
+    barlines = measure.findall('barline')
+
+    # Iterate through barlines and extract information
+    for barline in barlines:
         repeat = barline.find('repeat')
         if repeat != None:
             direction = repeat.attrib.get('direction')
@@ -174,7 +179,7 @@ for measure in root.iter('measure'):
 the_chord_sequence = np.array(the_chord_sequence, dtype=object)
 the_offset_sequence = np.array(the_offset_sequence, dtype=float)
 
-print(the_chord_sequence.shape, the_offset_sequence.shape)
+#print(the_chord_sequence.shape, the_offset_sequence.shape)
 
 #divide the chords into sections base, nature, extension, slash
 #the first two elements are the style 
@@ -188,7 +193,6 @@ offset_format = the_offset_sequence[0:2].tolist()
 the_sequence, the_offset = getArrayOfElementsInChord(the_sequence, the_offset)
 the_offset = offset_format + the_offset
 the_sequence = format + the_sequence
-print(the_sequence)
 
 #adjust the offset sequence
 the_sequence = np.array(the_sequence, dtype=object)
@@ -196,9 +200,86 @@ the_offset = np.array(the_offset, dtype=float)
 
 print(the_sequence.shape, the_offset.shape)
 
-for i in range (len(the_sequence)):
-    d = i%1
-    if (d == 0):
-        print('\n')
-    print("'"+the_sequence[i]+"'" + ' -> '+ str(the_offset[i]), end=' ')
+printThis = False
+if printThis:
+    for i in range (len(the_sequence)):
+        d = i%1
+        if (d == 0):
+            print('\n')
+        print("'"+the_sequence[i]+"'" + ' -> '+ str(the_offset[i]), end=' ')
+
+# %%
+#expand the song form
+def expand_song_structure(song_structure):
+    #convert numpy into array
+    song_structure = song_structure.tolist()
+    
+    print('Length of sequence:', len(song_structure))
+    #identify the location of the repetition symbols
+    
+    form_zone = {'start': 0, 'end': 0, id: 0}
+    inner_zone = {'start': 0, 'end': 0, id: 0}
+    #rest_zone = {'start': 0, 'end': 0, id: 0}
+            
+    stepper = 0
+    copy_section = []
+    copy = False
+    repeat_times = 0
+    repeat_bar_done = False
+    
+    #jump to the third element and save the prior information
+    intro_data = song_structure[0:2]
+    sequence = song_structure[2:]
+    
+    if '|:' not in song_structure:
+        print('No repetition data found')
+        return song_structure
+    
+    while stepper < len(sequence):
+        
+        #grab the element 
+        e = sequence[stepper]
+        #print(stepper, e)
+        if e == '|:':
+            #print(e, '---------------------------> found at:', stepper)
+            form_zone['start'] = stepper  
+            repeat_bar_done = False      
+        
+        if e.find('Repeat') != -1 and repeat_times == 0:
+            inner_zone['start'] = stepper
+            #move forward
+            stepper += 1
+            e = sequence[stepper]
+            repeat_times += 1
+        
+        if e.find('Repeat') != -1 and repeat_times > 0:
+            stepper = inner_zone['end'] + 3 #move to the next Repeat
+            e = sequence[stepper]
+            
+        if e == ':|' and repeat_bar_done == False:
+            form_zone['end'] = stepper
+            inner_zone['end'] = stepper
+            #move to the original location
+            stepper = form_zone['start'] + 1
+            e = sequence[stepper]
+            repeat_bar_done = True
+            #print('repetition done')
+        
+        #copy the information    
+        copy_section.append(e)
+            
+        stepper += 1
+    
+    copy_section = intro_data + copy_section
+    copy_section = [x.replace(':|', '|') for x in copy_section]
+    copy_section = [x.replace('|:', '|') for x in copy_section]
+    print('Process done...', 'New form length:', len(copy_section))
+    return copy_section        
+
+
+print(the_sequence.tolist())
+
+song_structure = expand_song_structure(the_sequence)
+
+print(song_structure)
 # %%
