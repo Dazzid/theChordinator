@@ -6,7 +6,9 @@ from utils import get_metadata, getArrayOfElementsInChord
 
 import xml.etree.ElementTree as ET
 
-#song_path = "../data/iRealXML/Message To A Friend.xml"
+#get version of xml
+#print(ET.VERSION)
+
 file = "Aquarela Do Brasil (a.k.a. Brazil).musicxml"
 song_path = "../data/" + file
 

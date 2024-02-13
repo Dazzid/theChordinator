@@ -1,6 +1,6 @@
 #%%
 import random
-#Extract m11, m9, m6 and add maj in the dataset, 
+# Change m11, m9, and add maj in the dataset, 
 # change 7 by dom_7, change 7sus by sus7
 
 # natures = ['maj','7sus', 'm', 'm11', 'm6', 'm7', 'm9', 'dom_7', 'maj7', 'o7', 'sus', 'sus2', 'ø7']
@@ -14,7 +14,7 @@ import random
 natures = {'maj', '7sus', 'm', 'm11', 'm6', 'm7', 'm9', 'dom_7', 'maj7', 'o7', 'sus', 'sus2', 'ø7'}
 alter = {'add #11', 'add #5', 'add #7', 'add #9', 'add 13', 'add 2', 'add 5', 'add 6', 'add 7', 'add 8', 'add 9', 'add b13', 'add b2', 'add b6', 'add b9', 'alter #11', 'alter #5', 'alter #7', 'alter #9', 'alter b5', 'alter b9'}
 
-structural_elements = {'.', '|', ':|', '|:', '/', 'N.C.'} #to add the maj token 
+structural_elements = {'.', '|', ':|', '|:', '/', 'N.C.', 'maj'} #to add the maj token 
 
 voicing = ['v_0', 'v_1', 'v_2', 'v_3']
 
